@@ -6,11 +6,14 @@ public class Class1 {
 
     public static void main(String[] args) {
 
-        Person p1 = new Person("タロウ", 8);
-        Person p2 = new Person("花子", 100);
+        Person[] people = {
+            new Person("タロウ", 8),
+            new Person("花子", 100)
+        };
 
-        p1.sayHello(LocalDateTime.now().getHour());
-        p2.sayHello(LocalDateTime.now().getHour());
+        for (Person person : people) {
+            person.sayHello(LocalDateTime.now().getHour());
+        }
 
         TestCalendar tc = new TestCalendar(); // TestCalendarのインスタンスを作成
         String b5ys = tc.getB5ys(); // getB5ysメソッドを呼び出し、結果をb5ysに格納

@@ -12,20 +12,18 @@ public class Person {
 				
 	}
 	
-	public void sayHello(int time) {
-		
-		String text ="";
-		
-		if(5<time && time<10) {
-			text = "おはようございます。";
-		} else if(10<=time && time<17) {
-			text = "こんにちは。";
-		} else {
-			text = "こんばんは。";
-		}
-		
-		System.out.println(text + name + "です。" + age + "才です。");
-	}
-	
+	 public void sayHello(int hour) {
+	        String greeting = generateGreeting(hour);
+	        System.out.println(greeting + " " + this.name + "です。" + this.age + "才です。");
+	    }
 
-}
+	 private String generateGreeting(int hour) {
+	        if (hour >= 6 && hour < 12) {
+	            return "おはようございます。";
+	        } else if (hour >= 12 && hour < 18) {
+	            return "こんにちは。";
+	        } else {
+	            return "こんばんは。";
+	        }
+	    }
+	}

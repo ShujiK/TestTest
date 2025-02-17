@@ -1,5 +1,8 @@
 package Test;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 
 public class TestCalendar {
@@ -16,4 +19,17 @@ public class TestCalendar {
 
         return b5ys;
     }
+    
+    public long daysBetween() { // daysBetween()メソッドの定義
+            
+            //日付の差を求める
+            LocalDate date1 =   LocalDateTime.now().toLocalDate(); // toLocalDate()でLocalDate型に変換;
+            LocalDate date2 = LocalDate.of(2100, 1, 1);
+     
+            long daysBetween = ChronoUnit.DAYS.between(date1, date2);
+            
+           
+            return daysBetween;
+    }
 }
+    

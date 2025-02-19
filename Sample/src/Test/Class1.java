@@ -7,7 +7,7 @@ public class Class1 {
     public static void main(String[] args) {
 
         Person[] people = {
-            new Person("タロウ", 8),
+            new Person("ユウタ", 24),
             new Person("花子", 100)
         };
 

@@ -8,6 +8,7 @@ public class Class1 {
 
         Person[] people = {
             new Person("ユウタ", 24),
+            new Person("秀二", 59),
             new Person("花子", 100)
         };
 

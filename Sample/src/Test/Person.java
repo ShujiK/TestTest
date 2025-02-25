@@ -22,8 +22,10 @@ public class Person {
 	            return "おはようございます。";
 	        } else if (hour >= 12 && hour < 18) {
 	            return "こんにちは。";
-	        } else {
+	        } else  if(hour >= 18 && hour < 23) {
 	            return "こんばんは。";
+	        } else {
+	        	return "おやすみなさい。";
 	        }
 	    }
 	}
